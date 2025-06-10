@@ -443,3 +443,290 @@
 // }
 
 
+// public class main {
+//     public static void main(String[] args) {
+//         int a = 10;
+//         int b = 20;
+//         int c = 30;
+
+//         int x,y,z;
+//         x = 100;
+//         y = 200;
+//         z = 300;
+
+//         int i,j,k;
+//         i = j = k = 90;
+//     }
+// }
+
+// public class main {
+//     public static void main(String[] args) {
+//         //Widening Conversion - lower to higher data type
+//         int num = 10;
+//         double newNum = num;
+
+//         System.out.println("Integer value: " + num);
+//         System.out.println("Double value: " + newNum);
+
+//         //Narrowing Conversion - higher to lower data type
+//         double decimalNum = 9.99;
+//         int newDecimalNum = (int) decimalNum;
+
+//         System.out.println("Double value: " + decimalNum);
+//         System.out.println("Integer value after narrowing: " + newDecimalNum);
+//     }
+// }
+
+// import java.util.*;
+
+// public class main {
+//     public static void main(String[] args) {
+//         ArrayList<String> names = new ArrayList<>();
+//         names.add("Omkar");
+//         names.add("Shivam");
+//         names.add("Sagar");
+//         names.add("Siddharth");
+//         names.add("Shivam");
+
+//         // System.out.println(names);
+
+//         //Accessing elements
+//         // System.out.println("Frist element: " + names.get(0));
+
+//         //Updating elements
+//         // names.set(0, "Akash");
+//         // System.out.println(names);
+
+//         //Removing elements
+//         // names.remove("Sagar");
+//         // System.out.println(names);
+
+//         //Checking if an element exists
+//         // System.out.println("Contains 'Shivam': " + names.contains("Shivam"));
+
+//         //Size of the ArrayList
+//         System.out.println("Size of the ArrayList: " + names.size());
+//     }
+// }
+
+//Linked List
+
+// import java.util.*;
+
+// public class main {
+//     public static void main(String[] args) {
+//         LinkedList <String> names = new LinkedList<>();
+//         names.add("Omkar");
+//         names.add("Shivam");
+//         names.add("Sagar");
+//         names.addFirst("Siddharth");
+//         names.addLast("Akash");
+//         System.out.println(names);
+//     }
+// }
+
+
+//enum in Java
+// public class main {
+//     enum Days {
+//         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+//     }
+//     public static void main(String[] args) {
+//         Days today = Days.MONDAY;
+//         switch (today) {
+//             case MONDAY:
+//                 System.out.println("Today is Monday");
+//                 break;
+//             case TUESDAY:
+//                 System.out.println("Today is Tuesday");
+//                 break;
+//             case WEDNESDAY:
+//                 System.out.println("Today is Wednesday");
+//                 break;
+//             case THURSDAY:
+//                 System.out.println("Today is Thursday");
+//                 break;
+//             case FRIDAY:
+//                 System.out.println("Today is Friday");
+//                 break;
+//             case SATURDAY:
+//                 System.out.println("Today is Saturday");
+//                 break;
+//             case SUNDAY:
+//                 System.out.println("Today is Sunday");
+//                 break;
+//             default:
+//                 System.out.println("Invalid day");
+//                 break;
+//         }
+//     }
+// }
+
+
+// public class main {
+//     enum HttpsStatus{
+//         OK(200,"Success"),
+//         NOT_FOUND(404,"Resourses Not Found"),
+//         INTERNAL_ERROR(500,"Internal Server Error");
+
+//         private int code;
+//         private String message;
+//         //value set
+//         HttpsStatus(int code , String message){
+//             this.code = code;
+//             this.message = message;
+//         }
+//         //value get
+//         public int getCode(){
+//             return code;
+//         }
+//         public String getMessage(){
+//             return message;
+//         }
+//     }
+
+    
+//     public static void main(String[] args) {
+//         HttpsStatus status = HttpsStatus.OK;
+
+//         System.out.println("HTTPS code : " + status.getCode());
+//         System.out.println("Message : " + status.getMessage());
+        
+//     }
+// }
+
+//creating a class
+// public class main{
+//     final int speed = 100;  //attribute declaration
+//     public static void main(String[] args) {
+//         main car = new main();
+//         car.speed = 120; //attribute initialization
+//         System.out.println("Car speed is: " + car.speed + " km/h");
+//     }
+// }
+
+
+// class method
+// public class main {
+//     static void myMethod(){
+//         System.out.println("Hello, this is my method!");
+//     }
+//     public static void main(String[] args) {
+//         myMethod();
+//     }
+// }
+
+// class with parameters
+// public class main {
+//     static void speed(int maxSpeed){
+//         System.out.println("The maximum speed is: " + maxSpeed + " km/h");
+//     }
+//     public static void main(String[] args) {
+//         main car = new main(); //created object from main class
+//         car.speed(120);
+
+//     }
+// }
+
+
+//constructor
+// public class main {
+//     public main(){
+//         System.out.println("New Object Created");
+//     }
+
+//     public static void main(String[] args) {
+//         main stu0 = new main();
+//         main stu1 = new main();
+//     }
+// }
+
+//constructor with parameters
+// public class main {
+//     int id;
+//     public main(int i){
+//         id = i;
+//         System.out.println("ID is: " + id);
+//     }
+
+//     public static void main(String[] args) {
+//         main stu = new main(12);
+//     }
+// }
+
+//Inheritance
+// parent class - super class
+// class Vehicle{
+//     // attribute
+//     protected String brand = "Ford";  //protected access modifier allows access in subclasses
+//     // method
+//     public void speed(){
+//         System.out.println("The vehicle is moving at a speed of 60 km/h");
+//     }
+// }
+
+// // child class - sub class
+// class main extends Vehicle{
+//     private String modelName = "Mustang";
+//     public static void main(String[] args) {
+//         main myCar = new main();
+//         myCar.speed();  //calling method from parent class
+//         System.out.println("Brand: " + myCar.brand);  //accessing protected variable from parent class
+//         System.out.println("Model: " + myCar.modelName);
+//     }
+// }
+
+
+
+// polymorphism
+// class User{
+//     public void display(){
+//         System.out.println("This is a user");
+//     }
+// }
+
+// class Student extends User{
+//     public void display(){
+//         System.out.println("This is a student");
+//     }
+// }
+
+// class Teacher extends User{
+//     public void display(){
+//         System.out.println("This is a teacher");
+//     }
+// }
+
+// public class main {
+
+//     public static void main(String[] args) {
+//         User user1 = new User();
+//         Student student1 = new Student();
+//         Teacher teacher1 = new Teacher();
+
+//         user1.display();  // This is a user
+//         student1.display();  // This is a student
+//         teacher1.display();  // This is a teacher
+//     }
+// }
+
+
+
+class BankAccount{
+    protected void accessBalance(){
+        System.out.println("Accessing balance...");
+    }
+}
+
+class SavingsAccount extends BankAccount{
+    public void viewBalance(){
+        accessBalance();
+    }
+}
+
+public class main {
+    public static void main(String[] args) {
+        SavingsAccount s1 = new SavingsAccount();
+        s1.viewBalance();  // Accessing private method through public method
+    }
+}
