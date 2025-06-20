@@ -712,21 +712,330 @@
 
 
 
-class BankAccount{
-    protected void accessBalance(){
-        System.out.println("Accessing balance...");
-    }
-}
+// class BankAccount{
+//     protected void accessBalance(){
+//         System.out.println("Accessing balance...");
+//     }
+// }
 
-class SavingsAccount extends BankAccount{
-    public void viewBalance(){
-        accessBalance();
-    }
-}
+// class SavingsAccount extends BankAccount{
+//     public void viewBalance(){
+//         accessBalance();
+//     }
+// }
 
-public class main {
-    public static void main(String[] args) {
-        SavingsAccount s1 = new SavingsAccount();
-        s1.viewBalance();  // Accessing private method through public method
-    }
-}
+// public class main {
+//     public static void main(String[] args) {
+//         SavingsAccount s1 = new SavingsAccount();
+//         s1.viewBalance();  // Accessing private method through public method
+//     }
+// }
+
+// String Methods
+// public class main {
+//     public static void main(String[] args) {
+//         // String name = " Java Programming ";
+//         // System.out.println(name.length());
+//         // System.out.println(name.trim());
+//         // System.out.println(name.substring(1,5));
+//         // System.out.println(name.contains("gram"));
+//         // System.out.println(name.replace("Java","Python"));
+
+//         String a = "Hello";
+//         String b = "Hello";
+//         String c = new String("Hello");
+
+//         System.out.println(a == b);
+//         System.out.println(a == c);
+//         System.out.println(a.equals(c)); // it checks the values
+
+//     }
+// }
+
+// Exception Handling
+// public class main {
+//     public static void main(String[] args) {
+//         try{
+//             int a = 10;
+//             int b = 0;
+//             int c = a / b;
+//             System.out.println(c);
+//         }
+//         catch(ArithmeticException e){
+//             System.out.println("Can't be divisible by zero");
+//         }
+//         finally{
+//             System.out.println("Try/Catch block excuted");
+//         }
+//     }
+// }
+
+// public class main {
+//     static void checkAge(int age) throws Exception{
+//         if(age<18){
+//             throw new Exception("Not eligible to vote");
+//         }
+//         else{
+//             System.out.println("Eligible to vote");
+//         }
+//     }
+//     public static void main(String[] args) {
+//         try {
+//             checkAge(22);
+//         } catch (Exception e) {
+//             System.out.println(e.getMessage());
+//         }
+//     }
+// }
+
+
+// Functions
+// public class main {
+//     static void greet(){
+//         System.out.println("Hello Welcome to Functions in Java");
+//     }
+
+//     public static void main(String[] args) {
+//         greet();
+//         greet();
+//         greet();
+//     }
+// }
+
+
+
+//Functions with parameters
+// public class main {
+//     static void greet(String name){
+//         System.out.println("Hello " + name + " Welcome to Functions in Java");
+//     }
+
+//     public static void main(String[] args) {
+//         greet("Rahul");
+//         greet("Omkar");
+//     }
+// }
+
+
+// public class main {
+//     static void salaryCalculator(int salary){
+//         // income tax - 12% & PF - 8%
+//         double incomeTax = salary/100*12;
+//         double pf = salary/100*8;
+//         double netSalary = salary - (incomeTax + pf);
+
+//         System.out.println("Salary: " + salary);
+//         System.out.println("Income Tax: " + incomeTax);
+//         System.out.println("PF: " + pf);
+//         System.out.println("Net Salary: " + netSalary);
+//     }
+//     public static void main(String[] args) {
+//         salaryCalculator(50000);     
+//     }
+// }
+
+
+// public class main {
+//     static void currencyConverter(int rs){
+//         double doller = rs / 86.50;
+//         System.out.println("Rs. " + rs + " = $" + doller); // Rs. 1000 = $11.56
+//     }
+//     public static void main(String[] args) {
+//         currencyConverter(1000);
+//     }
+// }
+
+// function with return type
+// public class main {
+//     static int square(int num){
+//         return num * num;
+//     }
+//     public static void main(String[] args) {
+//         int result = square(5);
+//         System.out.println("The square of 5 is: " + result); // The square of 5 is: 25
+//     }
+// }
+
+// class Example{
+//     void nonStaticFunc(){
+//         System.out.println("This is a non-static function");
+//     }
+
+//     static void staticFunc(){
+//         System.out.println("This is a static function");
+//     }
+// }
+
+// public class main {
+//     public static void main(String[] args) {
+//         // static function
+//         Example.staticFunc();
+//         // non-static function
+//         Example ex = new Example();
+//         ex.nonStaticFunc();
+//     }
+// }
+
+
+// File Handling
+// Creating a file
+
+// import java.io.File;
+// import java.io.IOException;
+
+// public class main {
+//     public static void main(String[] args) {
+//         try {
+//             File myFile = new File("example.txt");
+//             if(myFile.createNewFile()){
+//                 System.out.println("File created: " + myFile.getName());
+//             } else {
+//                 System.out.println("File already exists.");
+//             }
+//         } catch (Exception e) {
+//             System.out.println("An error occurred.");
+//             e.printStackTrace();
+//         }
+//     }
+// }
+
+
+// Writing to a file
+// import java.io.FileWriter;
+// import java.io.IOException;
+// public class main {
+
+//     public static void main(String[] args) {
+//         try {
+//             FileWriter writer = new FileWriter("example.txt");
+//             writer.write("Hello, this is a sample text written to the file.");
+//             writer.write("\nThis is a new line in the file.");
+//             writer.close();
+//             System.out.println("Successfully wrote to the file.");
+//         } catch (Exception e) {
+//             System.out.println("An error occurred while writing to the file.");
+//             e.printStackTrace();
+//         }
+//     }
+// }
+
+
+// Reading from a file
+// import java.io.File;
+// import java.io.FileNotFoundException;
+// import java.util.Scanner;
+
+// public class main {
+
+//     public static void main(String[] args) {
+//         try {
+//             File myFile = new File("example.txt");
+//             Scanner myReader = new Scanner(myFile);
+//             while(myReader.hasNextLine()){
+//                 String line = myReader.nextLine();
+//                 System.out.println(line);
+//             }
+//             myReader.close();
+//         } catch (FileNotFoundException e) {
+//             System.out.println("An error occurred while reading the file.");
+//             e.printStackTrace();
+//         }
+//     }
+// }
+
+// Appending to a file
+// import java.io.FileWriter;
+// import java.io.IOException;
+
+// public class main {
+//     public static void main(String[] args) {
+//         try {
+//             FileWriter writer = new FileWriter("example.txt");
+//             writer.write("\nThis line is appended to the existing file.");
+//             writer.close();
+//             System.out.println("Successfully appended to the file.");
+//         } catch (IOException e) {
+//             System.out.println("An error occurred while appending to the file.");
+//             e.printStackTrace();
+//         }
+//     }
+// }
+
+
+// Deleting a file
+// import java.io.File;
+// public class main {
+//     public static void main(String[] args) {
+//         File myFile = new File("example.txt");
+//         if(myFile.delete()){
+//             System.out.println("File deleted successfully: " + myFile.getName());
+//         }
+//         else{
+//             System.out.println("Failed to delete the file: " + myFile.getName());
+//         }
+//     }
+// }
+
+// 17/06/25
+// recurssion
+
+// public class main {
+//     public static void main(String[] args) {
+//         int result = total(10);
+//         System.out.println(result);
+//     }
+//     public static int total(int n){
+//         if(n>0){
+//             return n + total(n-1);
+//         }
+//         else{
+//             return 0;
+//         }
+//     }
+// }
+
+
+// Method Scope
+// public class main {
+
+//     public static void main(String[] args) {
+//         int x = 10;
+
+//         System.out.println(x);
+//         test();
+//     }
+
+//     public static int test(){
+//         System.out.println(x);
+//         return 0;
+//     }
+// }
+
+// Block Scope
+// public class main {
+
+//     public static void main(String[] args) {
+//         {
+//             int a = 34;
+//             System.out.println(a);
+//         }
+//         // System.out.println(a); - cannot be called outside the block
+//     }
+// }
+
+
+// import java.util.ArrayList;;
+
+// public class main {
+
+//     public static void main(String[] args) {
+//         ArrayList<Integer> numbers = new ArrayList<Integer>();
+//         numbers.add(67);
+//         numbers.add(99);
+//         numbers.add(4);
+//         numbers.add(147);
+//         numbers.forEach((n)->{System.out.println(n);});
+//     }
+    
+// }
+

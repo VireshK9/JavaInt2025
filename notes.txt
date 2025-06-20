@@ -1,3 +1,58 @@
- - output
- - input
- - storage
+- installation
+- working of java
+- syntax
+- giving message to user using print , println
+- memory address
+- variables
+- data types
+- identifiers
+- type casting - widnening & narrowing
+- operator - A , C , L
+- String Methods
+- Scanner
+- Control Statements
+    - If/else
+    - if/else if/else
+    - short hand if/else
+    - nested if/else
+    - switch statement
+- Loops
+    - for loop
+    - while loop 
+    - do-while loop 
+    - nested for loop 
+    - for each loop
+    - break & continue
+- Array
+    - 1D, 2D
+    - Array Methods
+- Array List & Linked list
+- Enums
+- OOP's
+    - class
+    - object
+    - attributes
+    - class method
+    - constructor func
+    - inheritance
+    - polymorphism
+    - access specifiers
+- String in java
+- Exception handling
+    - try-catch-finally
+    - throw an Exception
+- Functions
+    - Func with para
+**    - Recurssion
+    - return type
+    - static vs non-static
+- file handling
+    - Create
+    - Write
+    - Read
+    - Append
+    - Delete
+- SQL Database
+    - CRUD
+    - Connecting SQL with Java 
+- Project using DB and Java
